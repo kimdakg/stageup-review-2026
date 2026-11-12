@@ -43,10 +43,61 @@ h1,h2,h3,b,strong,.project-number,.project-title,.project label.field-label{font
 .field-foot{color:#72767c}
 @media(max-width:600px){.rich-field,.contribution .rich-field{font-size:14px}.project{margin-bottom:32px}}
 @media print{.rich-field,.contribution .rich-field,.rich-field *{font-size:10pt;font-weight:400;border:0;background:none;outline:none}.project-title{font-size:11pt;font-weight:400;border:0}.project{margin-bottom:0}}
-</style><meta name="robots" content="noindex, nofollow"></head>
+</style><meta name="robots" content="noindex, nofollow"><style id="review-panel-style">
+/* Visual grouping belongs to the page, outside the plain-text review fields. */
+body{background:#f5f6f8}
+main{max-width:1216px;padding-top:36px}
+.review-header{margin-bottom:24px}
+.review-heading{margin-bottom:18px}
+.review-toolbar{padding:0}
+.review-panel{margin-top:36px;padding:28px 30px 30px;background:#fff;border:1px solid #dce1e7;border-radius:12px;box-shadow:0 2px 7px #17243606}
+.review-panel.self-section{margin-top:0}
+.review-panel>.field-head,.review-panel>.section-head{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #e4e8ed;min-height:43px}
+.review-panel h2{display:flex;align-items:center;gap:10px;font-size:16px;line-height:1.5}
+.review-panel h2:before{display:inline-flex;justify-content:center;align-items:center;width:28px;height:28px;border-radius:7px;background:#eef1f5;color:#526075;font-size:12px;flex:none;letter-spacing:0}
+.review-panel #self-heading:before{content:"01"}
+.review-panel #projects-heading:before{content:"02"}
+.review-panel .required{margin-left:-6px}
+.review-panel .rich-field{padding:6px 0 10px}
+.review-panel .projects{border:0}
+.review-panel .project{margin:0;padding:18px 0 22px;border:0}
+.review-panel .project+.project{border-top:1px solid #dce1e7;padding-top:30px;margin-top:12px}
+.review-panel .project:last-child{padding-bottom:0}
+.review-panel .project-main{border:0;padding:0 0 0 16px}
+.review-panel .project-number{padding-top:8px;color:#647085}
+.review-panel .project-side{padding-top:4px}
+.review-panel .project label.field-label{color:#626d7b}
+.review-panel .project-title:disabled{background:#f7f8fa;border-color:#e6e9ed}
+.review-panel .contribution{margin-top:24px}
+.review-panel .field-foot{margin-top:12px}
+.footer-actions{margin-top:32px}
+@media(max-width:850px){.review-panel{padding:24px}}
+@media(max-width:600px){
+ body{background:#f5f6f8}main{padding:22px 12px 32px}
+ .review-header{padding:0 4px}.review-heading{gap:8px}
+ .review-panel{padding:20px 16px 22px;border-radius:10px;margin-top:24px}
+ .review-panel>.field-head,.review-panel>.section-head{gap:8px;padding-bottom:14px;margin-bottom:16px}
+ .review-panel h2{font-size:15px;gap:8px}.review-panel h2:before{width:25px;height:25px;font-size:11px}
+ .review-panel .project-main{padding-left:8px}
+ .review-panel .project+.project{padding-top:24px;margin-top:8px}
+ .review-panel .project-side{top:0}.review-panel .project+.project .project-side{top:24px}
+ .review-panel .rich-field{font-size:14px;padding:4px 0 8px}
+ .review-panel .field-head .copy-btn{white-space:nowrap}
+}
+@media print{
+ body{background:#fff}main{padding:0}
+ .review-panel,.review-panel.self-section{border:0;border-radius:0;box-shadow:none;padding:0;margin-top:25px;background:none}
+ .review-panel>.field-head,.review-panel>.section-head{border:0;padding:0;margin-bottom:12px}
+ .review-panel h2:before{display:none}
+ .review-panel .project,.review-panel .project+.project{border:0;padding:0;margin:0}
+ .review-panel .project-main{padding:0}
+ .review-panel .project-title:disabled{background:none;border:0}
+ .review-panel .rich-field,.review-panel .contribution .rich-field{padding:0;font-size:10pt}
+}
+</style></head>
 <body>
 <main>
-  <header class="review-header"><div class="review-heading"><h1>셀프 리뷰 및 주요 성과</h1><span id="mode-label" class="review-label">검토본</span></div><div class="review-toolbar no-print"><div class="toolbar-main"><button class="btn" id="edit-review" data-action="edit">수정하기</button><button class="btn yellow" id="finish-review" data-action="finish" hidden>완료</button><button class="btn" id="spellcheck" data-action="spell">맞춤법 검사</button></div><div class="toolbar-secondary"><button class="btn" id="copy-link" data-action="copy-link" hidden>공유 링크 복사</button><button class="btn" data-action="print">인쇄 / PDF 저장</button></div></div></header><section class="self-section" aria-labelledby="self-heading">
+  <header class="review-header"><div class="review-heading"><h1>셀프 리뷰 및 주요 성과</h1><span id="mode-label" class="review-label">검토본</span></div><div class="review-toolbar no-print"><div class="toolbar-main"><button class="btn" id="edit-review" data-action="edit">수정하기</button><button class="btn yellow" id="finish-review" data-action="finish" hidden>완료</button><button class="btn" id="spellcheck" data-action="spell">맞춤법 검사</button></div><div class="toolbar-secondary"><button class="btn" id="copy-link" data-action="copy-link" hidden>공유 링크 복사</button><button class="btn" data-action="print">인쇄 / PDF 저장</button></div></div></header><section class="self-section review-panel" aria-labelledby="self-heading">
     <div class="field-head"><h2 id="self-heading">셀프 리뷰(Self-Review)<span class="required">*</span></h2><button class="copy-btn" data-action="copy-self">본문 복사</button></div>
     <div id="self-review" class="rich-field" contenteditable="false" role="textbox" aria-multiline="true" aria-labelledby="self-heading" spellcheck="true" data-editable="" lang="ko" data-format="plain-text">[수행 개요]
 2022년 말 Stage 2로 입사한 이후 광고 상품 UI와 개발 가이드, 광고주용 소재 제작 가이드를 담당해 왔습니다. 2023년 다음 숏폼 광고, 2024년 프로필 풀뷰와 NAS 광고, 2025년 숏폼탭 광고에 이어 2026년에는 PC톡과 카카오맵 광고를 수행했습니다. 디자인 담당자로서 서비스 환경에 맞는 화면과 동작을 설계하고, 협업 과정에서 결정한 내용을 실제 구현과 소재 제작에 필요한 기준으로 정리해 왔습니다.
@@ -82,7 +133,7 @@ h1,h2,h3,b,strong,.project-number,.project-title,.project label.field-label{font
 - 이러한 경험을 바탕으로 광고 UI 설계, 협업 조건을 반영한 대안 제시, 다른 직무가 활용하는 기준 수립과 동료 지원까지 역할을 넓혀 왔습니다. 앞으로는 다양한 매체와 광고 형식의 프로젝트를 통해 판단 근거와 경험을 쌓고, 새로운 과제에서도 사용 맥락과 제약을 파악해 적합한 디자인을 제안할 수 있는 전문성을 높이고자 합니다.</div>
     <div class="field-foot"><span class="edit-note">검토 후 수정하기를 눌러 내용을 편집할 수 있습니다.</span><span id="self-count"></span></div>
   </section>
-  <section aria-labelledby="projects-heading">
+  <section aria-labelledby="projects-heading" class="review-panel">
     <div class="section-head projects-head"><h2 id="projects-heading">주요 성과(업적)<span class="required">*</span></h2><span class="count" id="project-count">3 / 5개 과제</span></div>
     <div class="project-tools edit-only" hidden=""><button class="btn" id="delete-projects" data-action="delete-projects" disabled>선택 삭제</button><button class="btn dark" id="add-project" data-action="add-project">과제 추가</button></div>
     <div class="projects" id="projects"><article class="project" aria-label="주요 성과 과제">
